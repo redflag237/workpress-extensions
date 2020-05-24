@@ -1,5 +1,4 @@
 FROM wordpress:php7.2-apache
-
 USER root
 
 # Get Debian up-to-date
