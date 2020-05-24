@@ -15,9 +15,9 @@ RUN echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | tee -a /
     php7.2-mysql php7.2-curl php7.2-xml php7.2-mbstring \
     php7.2-intl php7.2-redis php7.2-zip \
     
-VOLUME /var/www/html
-COPY docker-entrypoint.sh /entrypoint.sh
+#VOLUME /var/www/html
+#COPY docker-entrypoint.sh /entrypoint.sh
 
 # grr, ENTRYPOINT resets CMD now
-ENTRYPOINT ["/entrypoint.sh"]
+#ENTRYPOINT ["/entrypoint.sh"]
 CMD ["apache2-foreground"]
