@@ -7,6 +7,8 @@ RUN apt-get update -qq \
     && DEBIAN_FRONTEND=noninteractive apt-get install -y git \
     wget curl \
     ca-certificates lsb-release apt-transport-https gnupg bsdmainutils
+    
+RUN apt install software-properties-common
 
 RUN add-apt-repository ppa:ondrej/php
 
