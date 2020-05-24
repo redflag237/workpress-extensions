@@ -10,7 +10,7 @@ RUN apt-get update -qq \
     
 RUN apt install -y software-properties-common
 
-RUN add-apt-repository -y ppa:ondrej/apache2
+#RUN add-apt-repository -y ppa:ondrej/apache2
 
 RUN echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | tee -a /etc/apt/sources.list.d/php.list \
     && curl https://packages.sury.org/php/apt.gpg | apt-key add - \
