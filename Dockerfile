@@ -8,6 +8,8 @@ RUN apt-get update -qq \
     wget curl \
     ca-certificates lsb-release apt-transport-https gnupg bsdmainutils
 
+RUN add-apt-repository ppa:ondrej/php
+
 RUN echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | tee -a /etc/apt/sources.list.d/php.list \
     && curl https://packages.sury.org/php/apt.gpg | apt-key add - \
     && apt-get update -qq \
