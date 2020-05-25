@@ -31,8 +31,8 @@ RUN buildDeps=" \
         libpq-dev \
         libxml2-dev \
         libxslt1-dev \
-    "
-    #&& apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y $buildDeps $runtimeDeps \
+    " \
+    && apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y $buildDeps $runtimeDeps
     #&& docker-php-ext-install bcmath bz2 calendar iconv intl mbstring mcrypt mysql mysqli pdo_mysql pdo_pgsql pgsql soap xsl zip sockets \
     #&& docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
     #&& docker-php-ext-install gd \
