@@ -58,10 +58,10 @@ RUN buildDeps=" \
     
 #VOLUME /var/www/html
 COPY docker-entrypoint.sh /entrypoint.sh
-RUN ls -lisah .
-RUN ls -lisah /
-RUN ls -lisah /var/www/html
-RUN find . -name docker-entrypoint.sh
+#RUN ls -lisah .
+RUN chmod ug+wx /entrypoint.sh && ls -lisah /
+#RUN ls -lisah /var/www/html
+#RUN find . -name docker-entrypoint.sh
 
 # grr, ENTRYPOINT resets CMD now
 ENTRYPOINT ["/entrypoint.sh"]
