@@ -57,13 +57,13 @@ RUN buildDeps=" \
 #RUN && docker-php-ext-install bcmath bz2 calendar iconv intl mbstring mcrypt mysql mysqli pdo_mysql pdo_pgsql pgsql soap xsl zip sockets \
     
 #VOLUME /var/www/html
-#COPY docker-entrypoint.sh /entrypoint.sh
+COPY docker-entrypoint.sh /entrypoint.sh
 RUN ls -lisah .
 RUN ls -lisah /
 RUN ls -lisah /var/www/html
 RUN find . -name docker-entrypoint.sh
 
 # grr, ENTRYPOINT resets CMD now
-#ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["/entrypoint.sh"]
 #ENTRYPOINT ["docker-entrypoint.sh"]
-#CMD ["apache2-foreground"]
+CMD ["apache2-foreground"]
