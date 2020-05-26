@@ -1,6 +1,6 @@
 FROM wordpress:php7.2-apache
 MAINTAINER Jonas Plitt version: 0.2
-#USER root
+USER root
 VOLUME /var/www/html
 
 # Get Debian up-to-date
