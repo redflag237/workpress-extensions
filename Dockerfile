@@ -7,9 +7,10 @@ VOLUME /var/www/html
 RUN apt-get update -qq \
     && DEBIAN_FRONTEND=noninteractive apt-get install -y git \
     wget curl \
-    ca-certificates lsb-release apt-transport-https gnupg bsdmainutils
+    ca-certificates lsb-release apt-transport-https gnupg bsdmainutils \
+    gcc make autoconf libc-dev pkg-config
     
-RUN apt install -y software-properties-common
+RUN apt install -y software-properties-common libyaml-dev
 
 # Install PHP extensions and PECL modules.
 RUN buildDeps=" \
