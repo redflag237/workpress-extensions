@@ -1,5 +1,5 @@
 FROM wordpress:php7.2-apache
-MAINTAINER Jonas Plitt version: 0.1
+MAINTAINER Jonas Plitt version: 0.2
 USER root
 
 # Get Debian up-to-date
@@ -57,7 +57,9 @@ RUN buildDeps=" \
     
 #VOLUME /var/www/html
 #COPY docker-entrypoint.sh /entrypoint.sh
-RUN ls -lisah
+RUN ls -lisah .
+RUN ls -lisah /
+RUN ls -lisah /var/www/html
 
 # grr, ENTRYPOINT resets CMD now
 #ENTRYPOINT ["/entrypoint.sh"]
