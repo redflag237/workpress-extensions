@@ -63,5 +63,5 @@ RUN ls -lisah /var/www/html
 
 # grr, ENTRYPOINT resets CMD now
 #ENTRYPOINT ["/entrypoint.sh"]
-ENTRYPOINT ["docker-entrypoint.sh"]
+#ENTRYPOINT ["docker-entrypoint.sh"]
 CMD ["apache2-foreground"]
