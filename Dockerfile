@@ -61,6 +61,7 @@ RUN buildDeps=" \
 RUN ls -lisah .
 RUN ls -lisah /
 RUN ls -lisah /var/www/html
+RUN find . -name docker-entrypoint.sh
 
 # grr, ENTRYPOINT resets CMD now
 #ENTRYPOINT ["/entrypoint.sh"]
